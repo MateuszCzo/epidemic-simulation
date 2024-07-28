@@ -19,7 +19,8 @@ The application helps users understand the dynamics of epidemics and their impac
 ### Running the Application
 1. Clone the repository to your local machine:
 git clone https://github.com/MateuszCzo/epidemic-simulation.git
-cd epidemic-simulation
+2. Change directory to project folder:
+```cd epidemic-simulation```
 
 2. Ensure that the following ports are open on your system:
 * 5432: PostgreSQL database
@@ -29,8 +30,14 @@ cd epidemic-simulation
 3. Build and start the application using Docker Compose:
 ```docker compose up```
 
-4. Access the application in your web browser at http://localhost:4200.
+5. Access the application in your web browser at http://localhost:4200.
 
 ### Stopping the Application
 To stop the application, press Ctrl+C in the terminal where Docker Compose is running, or run the following command in the project directory:
 ```docker compose down```
+
+## Troubleshooting
+If you encounter the following error: ```[epidemic_backend builder  7/10] RUN ./mvnw dependency:go-offline:
+0.645 /bin/sh: ./mvnw: not found```
+
+Please visit https://stackoverflow.com/questions/52748640/unable-to-run-mvnw-clean-install-when-building-docker-image-based-on-openjd for further instructions or consider downloading the project as a .zip file. :)
